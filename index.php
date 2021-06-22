@@ -141,7 +141,39 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             'grades' => [6,7,5,3,8,8]
         ],
     ];
- 
+    
+    /* Snack 5 */
+
+    $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repudiandae obcaecati accusamus sapiente nihil quaerat eveniet a quos facilis ex temporibus, asperiores non, sequi deserunt cum et accusantium libero tempora architecto saepe velit ad autem. Voluptatum provident esse, accusamus reprehenderit totam similique vel repellat ea. Magnam totam iste voluptates in enim suscipit impedit atque corporis provident dolorem, delectus, at id facilis ullam officia quo, earum aliquam! Ex et sunt rem quisquam? Quae beatae esse voluptatem voluptates! Ex fuga cum laboriosam eum illum quaerat, veniam ratione illo obcaecati veritatis nisi porro eligendi ipsam deleniti explicabo magnam cumque! Dolore doloribus numquam dolores aperiam labore, quis accusamus, ullam eos placeat distinctio excepturi. Doloribus illo voluptate in fugiat dolorum necessitatibus eveniet quis quas perspiciatis sint, nihil dolores accusantium alias laborum hic porro tempora dolore possimus consequatur minus placeat! Similique, facilis! Harum pariatur nihil distinctio optio id hic voluptate cum rerum iure corrupti voluptates explicabo debitis nobis obcaecati, magni ipsum ullam tenetur ipsa, expedita non dolore velit a! Praesentium optio possimus, dolore aspernatur placeat assumenda voluptates veniam eum a consequatur quam quasi eveniet laborum, incidunt et? Veritatis ipsam dolores doloremque consequatur, dolorum tenetur earum accusantium illo at repellat eveniet quisquam esse blanditiis ea sapiente nulla numquam eos delectus! Illo et aut laborum possimus cumque commodi dolorum doloribus vitae laboriosam, eligendi maiores pariatur quos alias consequuntur. Voluptatem cupiditate velit facilis accusantium nesciunt fugit, tenetur ex modi, laboriosam culpa voluptate voluptates cumque voluptas quas. Necessitatibus, facere eum. Harum cum placeat culpa dolorem, numquam possimus. Ipsa ab animi nisi maxime voluptatum modi, perspiciatis dolore aperiam fugit, optio quibusdam, fuga sed molestias inventore laudantium non laborum provident cum quis rem praesentium hic voluptatem! Similique hic exercitationem deserunt quas, numquam delectus impedit commodi, in perferendis voluptatum ab consequatur velit dolorem deleniti saepe ullam? Incidunt cumque velit quasi provident vero beatae ex tenetur vitae suscipit. Laborum ratione dicta velit nesciunt, consequuntur ad? Voluptas, iste dolores similique tempore, placeat reprehenderit quisquam, error maiores esse voluptatem sed hic. Cumque provident, ut facilis eligendi eius fugiat ipsum saepe asperiores magni quas vel molestias quam amet. Aut, totam sed! Rerum aperiam sit temporibus consequuntur natus, ducimus maxime placeat ad? In temporibus cum veritatis aspernatur voluptatibus alias. Enim, quam deleniti molestias dolor, harum magnam vitae eveniet earum numquam, reiciendis blanditiis delectus facilis iure cumque officiis labore consequatur? Quae temporibus est illo sit, explicabo officiis veritatis dolores quo odio itaque necessitatibus provident aspernatur non blanditiis sequi laborum similique? Incidunt ipsam, eius aperiam eum itaque, nam, porro commodi ullam dolorum doloribus delectus reprehenderit vero deserunt atque excepturi voluptas similique quos fuga. Sapiente aperiam nemo, distinctio repellat placeat quaerat, enim, maxime explicabo voluptate atque veniam? Consequatur, ducimus! Temporibus ipsam labore, laudantium ducimus expedita ut nostrum obcaecati ex maxime consequuntur non, beatae exercitationem quas modi blanditiis perferendis reiciendis aperiam autem. Veniam dolor enim modi optio ratione neque natus sunt aliquam a cupiditate dolores pariatur eaque alias fugit blanditiis qui perferendis, expedita ab magnam voluptates atque molestiae sed! Unde distinctio minus ratione. Beatae, in explicabo cumque dolor ullam nobis minima nulla.';
+
+    $lorem_array = explode('.', $lorem);
+
+    /* Snack 6 */
+
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ];
+
+
  ?>
 
  <!DOCTYPE html>
@@ -184,7 +216,7 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         ?>
         </div>
 
-        <h1>Snack 4</h1>
+        <h1>Snack 7</h1>
 
         <div>
         <?php
@@ -196,5 +228,27 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             }
         ?>
         </div>
+
+        <h1>Snack 5</h1>
+
+        <h3>Testo Intero</h3>
+        
+        <p><?php echo $lorem ?></p>
+
+        <h3>Testo diviso in paragrafi</h3>
+
+        <?php
+        
+        foreach ($lorem_array as $paragraph) {
+            echo '<p>'.$paragraph.'</p>';
+        }
+        
+        ?>
+
+        <h1>Snack 6</h1>
+
+
  </body>
  </html>
+
+ <!-- <?php ?> -->
