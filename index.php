@@ -109,6 +109,38 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             ]
         ],
     ];
+
+    $date_keys = array_keys($posts);
+
+    /* Snack 4 */
+
+    $students = [
+        [
+            'name' => 'Luca',
+            'lastname' => 'Petrino',
+            'grades' => [9,2,5,6,3,6]
+        ],
+        [
+            'name' => 'Maria',
+            'lastname' => 'Giovannini',
+            'grades' => [8,6,8,1,4,6]
+        ],
+        [
+            'name' => 'Albert',
+            'lastname' => 'Orthanc',
+            'grades' => [3,7,8,8,9,5]
+        ],
+        [
+            'name' => 'Jonathan',
+            'lastname' => 'Joestar',
+            'grades' => [10,8,7,1,6,10]
+        ],
+        [
+            'name' => 'Paola',
+            'lastname' => 'Ciotti',
+            'grades' => [6,7,5,3,8,8]
+        ],
+    ];
  
  ?>
 
@@ -137,10 +169,29 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         <div>
         <?php
 
-            for ($i=0; $i < count($posts); $i++) { 
-                echo $posts[$i]['title'];
+            foreach ($posts as $date) {
+                echo '<h3>'.$date_keys[0].'</h3>';
+                foreach ($date as $post) {
+                    echo '<div>'.'Title: '.$post['title'].'</div>'.
+                    '<div>'.'Author: '.$post['author'].'</div>'.
+                    '<div>'.'Text: '.$post['text'].'</div>'.'<br>';
+                }
             }
 
+            /* for ($i=0; $i < count($posts) ; $i++) { 
+                echo '<div>'.$date_keys[$i].'</div>';
+            } */
+        ?>
+        </div>
+
+        <h1>Snack 4</h1>
+
+        <div>
+        <?php
+
+            foreach ($students as $student) {
+                echo '<div>'.'<span>'.'Studente: '.'</span>'.'<strong>'.$student['name'].' '.$student['lastname'].'</strong>'.'</div>';
+            }
         ?>
         </div>
  </body>
