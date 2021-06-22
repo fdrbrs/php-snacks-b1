@@ -190,7 +190,9 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         <?php
 
             foreach ($students as $student) {
-                echo '<div>'.'<span>'.'Studente: '.'</span>'.'<strong>'.$student['name'].' '.$student['lastname'].'</strong>'.'</div>';
+                echo '<div>'.'<span>'.'Studente: '.'</span>'.'<strong>'.$student['name'].' '.$student['lastname'].'</strong>'.'</div>'.
+                '<span>Media: </span>'.'<strong>'.round(array_sum($student['grades']) / count($student['grades']), 2).'</strong>'
+                ;
             }
         ?>
         </div>
