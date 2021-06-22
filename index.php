@@ -2,10 +2,15 @@
 Snack 1
 Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.
 Olimpia Milano - Cantù | 55-60
+
+Snack 2
+Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
  -->
 
- <?php
 
+
+ <?php
+    /* Snack 1 */
     $partite = [
         [
             'squadra_casa' => 'Virtus Bologna',
@@ -51,6 +56,59 @@ Olimpia Milano - Cantù | 55-60
         ],
 
     ];
+
+    /* Snack 2 */
+    $name = $_GET['name'];
+    $mail = $_GET['mail'];
+    $age = $_GET['age'];
+
+    if (strlen($name) > 3 && strpos($mail, '.') && strpos($mail, '@') && is_numeric($age)) {
+        $access = 'Accesso riuscito';
+    } else {
+        $access = 'Accesso negato';
+    };
+
+    /* Snack 3 */
+
+    $posts = [
+
+        '10/01/2019' => [
+            [
+                'title' => 'Post 1',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 1'
+            ],
+            [
+                'title' => 'Post 2',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 2'
+            ],
+        ],
+        '10/02/2019' => [
+            [
+                'title' => 'Post 3',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 3'
+            ]
+        ],
+        '15/05/2019' => [
+            [
+                'title' => 'Post 4',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 4'
+            ],
+            [
+                'title' => 'Post 5',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 5'
+            ],
+            [
+                'title' => 'Post 6',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 6'
+            ]
+        ],
+    ];
  
  ?>
 
@@ -71,5 +129,19 @@ Olimpia Milano - Cantù | 55-60
                 }
             ?>
         </ul>
+
+        <h1>Snack 2</h1>
+        <div> <?php echo $access ?></div>
+
+        <h1>Snack 3</h1>
+        <div>
+        <?php
+
+            for ($i=0; $i < count($posts); $i++) { 
+                echo $posts[$i]['title'];
+            }
+
+        ?>
+        </div>
  </body>
  </html>
