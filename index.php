@@ -112,7 +112,7 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 
     $date_keys = array_keys($posts);
 
-    /* Snack 4 */
+    /* Snack 7 */
 
     $students = [
         [
@@ -150,6 +150,8 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 
     /* Snack 6 */
 
+    $random_array = [];
+
     $db = [
         'teachers' => [
             [
@@ -172,6 +174,8 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             ]
         ]
     ];
+
+    /* Snack 4 */
 
 
  ?>
@@ -246,6 +250,39 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         ?>
 
         <h1>Snack 6</h1>
+
+        <div style="background-color: grey; height: 100px">
+            <h3>Teachers</h3>
+            <?php
+            echo $db['teachers'][0]['name'].' '.$db['teachers'][0]['lastname'].'<br>'.
+            $db['teachers'][1]['name'].' '.$db['teachers'][1]['lastname']
+            ?>
+        </div>
+
+        <div style="background-color: lightgreen; height: 100px">
+            <h3>PM</h3>
+            <?php
+            echo $db['pm'][0]['name'].' '.$db['pm'][0]['lastname'].'<br>'.
+            $db['pm'][1]['name'].' '.$db['pm'][1]['lastname']
+            ?>
+        </div>
+
+        <h1>Snack 4</h1>
+
+        <?php
+        
+        while (count($random_array) < 15) {
+            $myNewInt = rand(1,100);
+            if (in_array("$myNewInt", $random_array) == false) {
+                $random_array[] = $myNewInt;
+            }
+        }
+
+        foreach ($random_array as $number) {
+            echo $number.' ';
+        }
+        
+        ?>
 
 
  </body>
