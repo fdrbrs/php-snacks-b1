@@ -220,34 +220,40 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         ?>
         </div>
 
-        <h1>Snack 7</h1>
+        <h1>Snack 4</h1>
 
-        <div>
         <?php
-
-            foreach ($students as $student) {
-                echo '<div>'.'<span>'.'Studente: '.'</span>'.'<strong>'.$student['name'].' '.$student['lastname'].'</strong>'.'</div>'.
-                '<span>Media: </span>'.'<strong>'.round(array_sum($student['grades']) / count($student['grades']), 2).'</strong>'
-                ;
+        
+        while (count($random_array) < 15) {
+            $myNewInt = rand(1,100);
+            if (in_array("$myNewInt", $random_array) == false) {
+                $random_array[] = $myNewInt;
             }
+        }
+
+        foreach ($random_array as $number) {
+            echo $number.' ';
+        }
+        
         ?>
-        </div>
 
         <h1>Snack 5</h1>
 
         <h3>Testo Intero</h3>
-        
+
         <p><?php echo $lorem ?></p>
 
         <h3>Testo diviso in paragrafi</h3>
 
         <?php
-        
+
         foreach ($lorem_array as $paragraph) {
             echo '<p>'.$paragraph.'</p>';
         }
-        
+
         ?>
+
+        
 
         <h1>Snack 6</h1>
 
@@ -267,22 +273,20 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             ?>
         </div>
 
-        <h1>Snack 4</h1>
+        <h1>Snack 7</h1>
 
+        <div>
         <?php
-        
-        while (count($random_array) < 15) {
-            $myNewInt = rand(1,100);
-            if (in_array("$myNewInt", $random_array) == false) {
-                $random_array[] = $myNewInt;
-            }
-        }
 
-        foreach ($random_array as $number) {
-            echo $number.' ';
-        }
-        
+            foreach ($students as $student) {
+                echo '<div>'.'<span>'.'Studente: '.'</span>'.'<strong>'.$student['name'].' '.$student['lastname'].'</strong>'.'</div>'.
+                '<span>Media: </span>'.'<strong>'.round(array_sum($student['grades']) / count($student['grades']), 2).'</strong>'
+                ;
+            }
         ?>
+        </div>
+
+        
 
 
  </body>
