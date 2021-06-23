@@ -46,6 +46,14 @@ foreach ($ads as $ad) {
 shuffle($active_ads);
 shuffle($ads);
  
+/* Come ha fatto fabio */
+
+/* $active_ads = array_filter($ads, function ($val) {
+    return $val['is_active'];
+}); */
+
+
+
  ?>
 
  <!DOCTYPE html>
@@ -65,5 +73,9 @@ shuffle($ads);
      <a href="">
         <img src="<?php echo $ads[0]['is_active'] === true ? $ads[0]['image_path'] : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZVJx-LqxhbyPITYJ-AMk2vrNhHQDNrZrZkA&usqp=CAU' ?>" alt="">
      </a>
+
+     <!-- come ha fatto Fabio -->
+
+
  </body>
  </html>
