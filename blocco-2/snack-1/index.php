@@ -44,6 +44,7 @@ foreach ($ads as $ad) {
 }
 
 shuffle($active_ads);
+var_dump($active_ads);
  
  ?>
 
@@ -57,7 +58,7 @@ shuffle($active_ads);
  </head>
  <body>
      <a href="<?php echo $active_ads[0]['link'] ?>">
-        <img src="<?php echo $active_ads[0]['image_path '] ?>" alt="">
+        <img src="<?php echo $active_ads[0]['image_path'] ?>" alt="">
      </a>
  </body>
  </html>
