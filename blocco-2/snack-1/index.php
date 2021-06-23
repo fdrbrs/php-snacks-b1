@@ -44,7 +44,7 @@ foreach ($ads as $ad) {
 }
 
 shuffle($active_ads);
-var_dump($active_ads);
+shuffle($ads);
  
  ?>
 
@@ -59,6 +59,11 @@ var_dump($active_ads);
  <body>
      <a href="<?php echo $active_ads[0]['link'] ?>">
         <img src="<?php echo $active_ads[0]['image_path'] ?>" alt="">
+     </a>
+    
+    <!-- stampare tra tutti gli ads, ma se non sono attivi stampare un banner "spazio libero" -->
+     <a href="">
+        <img src="<?php echo $ads[0]['is_active'] === true ? $ads[0]['image_path'] : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZVJx-LqxhbyPITYJ-AMk2vrNhHQDNrZrZkA&usqp=CAU' ?>" alt="">
      </a>
  </body>
  </html>
